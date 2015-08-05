@@ -9,6 +9,8 @@ app.use(express.static(path.join(__dirname, './client')));
 // app.use(bodyParser.json());
 // require('./config/route.js')(app);
 
-app.listen(8000, function() {
-	console.log('Yearbook on port: 8000');
+var port = process.env.PORT || 8000;
+console.log("Listening on " + port);
+
+app.listen(port);
 })
