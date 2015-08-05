@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="yearbook_app">
+<head>
+  <meta charset="utf-8">
+  <title>Yearbook May 2015</title>
+  <meta name="description" content="Yearbook for Coding Dojo May 2015 Cohort at Silicon Valley">
+  <meta name="author" content="Ed Lee">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+</head>
+<body ng-controller="yearbookController">
+
+  <div id="hero" class="section hero">
+    <div class="container">
+      <h2 class="hero-heading">
+      	This is the yearbook for the May 2015 Cohort at Coding Dojo in Silicon Valley.
+      </h2>
+      <a class="button button-primary" href="#students">Click Here to Check out the Alumni</a>
+    </div>
+  </div>
+
+  <div class="section students" id="students">
+    <div class="container">
+      <div class="row student-row" ng-repeat="s in students | orderBy:'full_name'" >
+        <!-- Student's image and button start -->
+        <div class="five columns">
+          <div class="student-img">
+            <div >
+              <img class="img" ng-init="imgsrc='normal'" ng-mouseover="imgsrc='funny'" ng-mouseleave="imgsrc='normal'" ng-src="images/{{s.name}}/{{imgsrc}}.jpg">
+            </div>
+            <button class="button button-primary student-button">
+              <span ng-bind="s.full_name"></span>
+            </button>
+          </div>
+        </div>
+        <!-- Student's image and button end -->
+        <!-- Student's info start -->
+        <div class="seven columns">
+          <div class="student-info effect-hover">
+            <div class="student-front">
+              <h4 class="quote">"<span ng-bind="s.quote"></span>"</h4>
+            </div>
+            <div class="student-back">
+              <ul>
+                <li>
+                  <a href="{{}}">
+                    <i class="fa fa-envelope-o fa-5x"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{s.linkedin}}">
+                    <i class="fa fa-linkedin-square fa-5x"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="{{s.github}}">
+                    <i class="fa fa-github-square fa-5x"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Student's info end -->
+      </div>
+    </div>
+  </div>
+
+  <div class="section bottom">
+    <div id="bottom-container" class="container">
+      <h3 class="section-heading">
+        12 Weeks of Intense Web Development Bootcamp
+      </h3>
+      <h4 class="section-description">
+        We have learned...
+      </h4>
+      <ul>
+        <li><img src="images/lamp.png"></li>
+        <li><img src="images/mean.png"></li>
+        <li><img src="images/rails.png"></li>
+        <li><img src="images/swift.png"></li>
+      </ul>
+      <a class="button button-primary" href="#hero">Go Back to Top</a>
+    </div>
+  </div>
+  <script type="text/javascript" src="angular/app.js"></script>
+  <script type="text/javascript" src="angular/controllers/yearbook-controller.js"></script>
+  <script type="text/javascript" src="angular/factories/yearbook-factory.js"></script>
+</body>
+</html>

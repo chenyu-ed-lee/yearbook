@@ -1,0 +1,161 @@
+/* Sections */
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+#hero {
+  /*background-color: #ff5078;*/
+  background-image: url("../images/sea.jpg");
+  background-repeat: no-repeat;
+}
+
+/* Students */
+.students {
+  width: 80%;
+  margin: auto;
+  border-left: 50px dashed #ff5078;
+  border-right: 50px dashed #ff5078;
+}
+
+.student-row {
+  margin-bottom: 50px;
+}
+
+.student-img
+{
+  width: 270px;
+  height: 255px;
+  margin-left: 30px;
+}
+
+.student-info
+{
+  position: relative;
+  width: 400px;
+  height: 230px;
+}
+
+.student-front {
+  background-color: #ff5078;
+}
+
+.student-back {
+  background-color: #1e1e1e;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.student-front, .student-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+}
+
+/* hover effect */
+.student-info.effect-hover:hover .student-front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.student-info.effect-hover:hover .student-back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+
+.student-button {
+  width: 200px;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+  border: #ff5078 solid 5px;
+  margin: auto;
+  border-radius: 8px
+}
+
+ul {
+  position: relative;
+  top: 25%;
+}
+
+li {
+  margin: 10px;
+  display: inline-block;
+}
+
+.quote {
+  position: relative;
+  top: 22%;
+}
+
+#bottom-container {
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 8px;
+}
+
+/* Bottom */
+.bottom {
+  background-color: #ff5078;
+}
+
+.hero-heading {
+  color: white;
+  font-weight: bold;
+}
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .section {
+    padding: 12rem 0 11rem;
+  }
+  .hero {
+    padding-bottom: 12rem;
+    text-align: center;
+    height: 165px;
+  }
+  .hero-heading {
+    /*font-size: 2.4rem;*/
+  }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+  .hero {
+    height: 190px;
+  }
+  .hero-heading {
+    /*font-size: 2.6rem;*/
+  }
+  .section {
+    padding: 14rem 0 15rem;
+  }
+  .hero {
+    padding: 16rem 0 14rem;
+  }
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+  .section {
+    padding: 20rem 0 19rem;
+  }
+  .hero {
+    padding: 22rem 0;
+  }
+  .hero-heading {
+    /*font-size: 3.0rem;*/
+  }
+}

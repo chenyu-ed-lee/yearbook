@@ -1,0 +1,1 @@
+var yearbook_app = angular.module('yearbook_app', ["ngRoute"]);

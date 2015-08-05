@@ -1,0 +1,19 @@
+{
+  "name": "yearbook",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.2.0",
+    "mongoose": "^4.0.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "description": "A yearbook for Coding Dojo May 2015 Cohort",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "Edward C. Lee",
+  "license": "ISC",
+  "engines": {
+    "node": "0.10.x"
+  }
+}
