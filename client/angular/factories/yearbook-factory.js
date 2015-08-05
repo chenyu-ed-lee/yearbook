@@ -2,9 +2,10 @@ yearbook_app.factory('yearbookFactory', function($http) {
 	var students = [
 		{full_name: "Ed Lee",
 		 quote: "Discover the talents within yourself.",
-		 github: "github.com",
-		 linkedin: "linkedin.com",
+		 github: "chenyu-ed-lee",
+		 linkedin: "edwardclee",
 		 name: "ed",
+		 email: "chenyu.ed.lee@gmail.com",
 		 id: 1},
 		{full_name: "Bryant Luu",
 		 quote: "You should have told me sooner so I can think of something cool.",
