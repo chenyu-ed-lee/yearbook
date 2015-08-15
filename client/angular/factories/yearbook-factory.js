@@ -15,7 +15,7 @@ yearbook_app.factory('yearbookFactory', function($http) {
 		 id: 2},
 		{full_name: "Hyun Jung",
 		 quote: "Hello, world!",
-		 github: "github.com",
+		 github: "hsjung22",
 		 linkedin: "linkedin.com",
 		 name: "hyun",
 		 id: 3},
