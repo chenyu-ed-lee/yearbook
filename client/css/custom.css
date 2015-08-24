@@ -72,7 +72,6 @@
           transform: rotateY(0);
 }
 
-
 .student-button {
   width: 200px;
 }
@@ -106,9 +105,16 @@ li {
   border-radius: 8px;
 }
 
-/* Bottom */
 .bottom {
   background-color: #ff5078;
+}
+
+#group-picture {
+  border-radius: 10px;
+  height: 400px;
+  width: 600px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .hero-heading {
